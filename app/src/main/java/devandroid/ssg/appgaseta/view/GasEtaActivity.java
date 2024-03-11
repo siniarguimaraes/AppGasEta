@@ -54,7 +54,8 @@ public class GasEtaActivity extends AppCompatActivity {
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                editGasolina.setText("");
+                editEtanol.setText("");
             }
         });
 
@@ -68,7 +69,7 @@ public class GasEtaActivity extends AppCompatActivity {
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(GasEtaActivity.this, "Volte Sempre!", Toast.LENGTH_LONG).show();
+                Toast.makeText(GasEtaActivity.this, "Boa Ecônomia..", Toast.LENGTH_LONG).show();
                 finish();
 
             }
