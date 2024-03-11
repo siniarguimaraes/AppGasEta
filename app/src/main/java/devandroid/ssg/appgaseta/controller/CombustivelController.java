@@ -11,7 +11,7 @@ public class CombustivelController {
     SharedPreferences.Editor dadosPreferences;
 
     // psfs resulmo do codigo para aramazenar o nome do arquivo.
-    public static final String NOME_PREFERENCES "Pref_gaseta";
+    public static final String NOME_PREFERENCES = "Pref_gaseta";
 
     public  CombustivelController(GasEtaActivity activity){
 
@@ -26,6 +26,13 @@ public class CombustivelController {
         dadosPreferences.putString("recomendacao",combustivel.getRecomendacao());
         dadosPreferences.apply();
 
+
+    }
+
+    public void limpar(){
+
+        dadosPreferences.clear();
+        dadosPreferences.apply();
 
     }
 
