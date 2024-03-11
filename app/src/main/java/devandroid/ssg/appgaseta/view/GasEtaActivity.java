@@ -75,8 +75,12 @@ public class GasEtaActivity extends AppCompatActivity {
 
                      txtResultado.setText(recomendacao);
 
+                     btnSalvar.setEnabled(true);  // Abilita o Buttom Salvar.
+
                  }else{
                      Toast.makeText(GasEtaActivity.this, "Favor,digite os Dados Obrigatórios ...", Toast.LENGTH_LONG).show();
+
+                     btnSalvar.setEnabled(false);  // Desabilita o Buttom Salvar.
 
                  }
 
@@ -88,6 +92,8 @@ public class GasEtaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 editGasolina.setText("");
                 editEtanol.setText("");
+
+                btnSalvar.setEnabled(false); // Desabilita o Bottom salvar.
             }
         });
 
