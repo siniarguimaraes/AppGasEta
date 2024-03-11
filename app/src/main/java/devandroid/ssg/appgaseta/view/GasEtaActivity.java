@@ -26,7 +26,7 @@ public class GasEtaActivity extends AppCompatActivity {
 
         editGasolina = findViewById(R.id.editGasolina);
 
-        Toast.makeText(GasEtaActivity.this,UtilGasEta.mensagem(),Toast.LENGTH_LONG).show();
+        Toast.makeText(GasEtaActivity.this,UtilGasEta.calcularMelhorOpcao(5.10,3.50 ),Toast.LENGTH_LONG).show();
 
 
     }
