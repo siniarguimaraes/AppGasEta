@@ -2,6 +2,7 @@ package devandroid.ssg.appgaseta.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +10,7 @@ import android.os.Handler;
 import devandroid.ssg.appgaseta.R;
 import devandroid.ssg.appgaseta.database.GasEtaDB;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     public static final int TIME_OUT_SPLASH = 3000;
@@ -27,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                //GasEtaDB DB = new GasEtaDB(SplashActivity.this);
+                GasEtaDB db = new GasEtaDB(SplashActivity.this);
 
                 Intent telaPrincipal = new Intent(SplashActivity.this, GasEtaActivity.class);
                 startActivity(telaPrincipal);

@@ -13,23 +13,24 @@ public class GasEtaDB extends SQLiteOpenHelper {
     public static final String DB_NAME = "gaseta.db";
     public static final int DB_VERSION = 1;
     Cursor cursor;
-    SQLiteDatabase DB;
+    SQLiteDatabase db;
     public GasEtaDB(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
 
-        DB = getWritableDatabase();
+        db = getWritableDatabase();
 
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String sqltabelacombustivel = "CREAT TABLE combustivel (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+        String sqlTabelaCombustivel
+                = "CREATE TABLE combustivel (id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nomeDoCombustivel TEXT, " +
                 "precoDoCombustivel REAL, " +
                 "recomendacao TEXT)";
 
-        DB.execSQL(sqltabelacombustivel);
+        db.execSQL(sqlTabelaCombustivel);
 
     }
 
