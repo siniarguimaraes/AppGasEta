@@ -2,10 +2,11 @@ package devandroid.ssg.appgaseta.controller;
 
 import android.content.SharedPreferences;
 
+import devandroid.ssg.appgaseta.database.GasEtaDB;
 import devandroid.ssg.appgaseta.model.Combustivel;
 import devandroid.ssg.appgaseta.view.GasEtaActivity;
 
-public class CombustivelController {
+public class CombustivelController extends GasEtaDB {
 
     SharedPreferences preferences;
     SharedPreferences.Editor dadosPreferences;
@@ -14,6 +15,7 @@ public class CombustivelController {
     public static final String NOME_PREFERENCES = "Pref_gaseta";
 
     public  CombustivelController(GasEtaActivity activity){
+        super(activity);
 
         preferences = activity.getSharedPreferences(NOME_PREFERENCES,0);
         dadosPreferences = preferences.edit();
