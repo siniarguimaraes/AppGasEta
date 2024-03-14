@@ -60,6 +60,11 @@ public class CombustivelController extends GasEtaDB {
 
     }
 
+    public void deletar(int id){
+
+        deletarObjeto("Combustivel", id);
+
+    }
 
     public void limpar(){
 
