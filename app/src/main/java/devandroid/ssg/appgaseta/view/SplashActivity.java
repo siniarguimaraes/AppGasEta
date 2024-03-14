@@ -12,10 +12,7 @@ import devandroid.ssg.appgaseta.database.GasEtaDB;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
-
     public static final int TIME_OUT_SPLASH = 3000;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
